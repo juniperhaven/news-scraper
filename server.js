@@ -6,11 +6,11 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = 8080;
 var app = express();
 
 app.use(logger("dev"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
