@@ -1,4 +1,0 @@
-- scraper(s) go in server.js
-- public folder for html (made with handlebars, I guess, since we installed express-handlebars)
-- models folder for the mongoose models and server (article and notes, probably, similarly to the folder 20 stuff), and index.js which exports all the models
-- probably also need something like app.js in the public folder for...js function and stuff
