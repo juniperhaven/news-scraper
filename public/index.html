@@ -4,13 +4,14 @@
         <meta charset="UTF-8">
         <title>News Scraper</title>
         <style>
-            body {background-color: rgb(108, 133, 134)}
+            body {background-color: rgb(108, 133, 134)} /* blue is a good color */
 
+            /* centered. at least on my screen. I like things that are centered. */
             #wrapper {
-                width: 1000px;
-                margin-left: auto;
+                width: 70%;
+                margin-left: 25%;
                 margin-right: auto;
-                padding-top: 5%;
+                padding: 5px;
             }
 
             #articles {
@@ -20,15 +21,10 @@
                 height: 700px;
             }
 
-            #notes {
-                float: right;
-                width: 30%;
-            }
-
             textarea, input {
                 display: block;
                 width: 100%;
-                background-color: #FCF5C7;
+                background-color: rgb(255, 255, 255);
             }
 
             input {
@@ -44,13 +40,23 @@
     </head>
 
     <body>
+        <!-- I made buttons. because I thought that was nice. there's one for scraping, one for listing the articles as json on the page, and one for reloading this page, because...why not? -->
         <a href="/scrape"><button>Scrape Articles</button></a>
         <a href="/articles"><button>List Articles</button></a>
+        <a href="/"><button>Home Page</button></a>
 
+        <!-- I included a thing telling people where to find the comments on a particular article. -->
+        <!-- could I have displayed the actual comments for each article on this page? maybe. probably. -->
+        <!-- but I didn't want to. for one thing, it's Friday, nearing midnight, and I just got this crap working. -->
+        <!-- for another, what if you had 25 comments on a single article? they'd take up half the page and the article page is ALREADY long. -->
         <div id="wrapper">
             <h1>News Scraper</h1>
+            <h2>To see comments on an article, put "/articles/(article's listed id number)" in the link.</h2>
             <div id="articles"></div>
             <div id="comments"></div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="news.js"></script>
     </body>
 </html>

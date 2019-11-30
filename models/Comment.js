@@ -1,14 +1,17 @@
+// again, require mongoose
 var mongoose = require("mongoose");
 
+// and the schema thing
 var Schema = mongoose.Schema;
 
+// make new schema for the comments
 var CommentSchema = new Schema({
-    // `title` is of type String
     title: String,
-    // `body` is of type String
     body: String
 });
 
-var Comment = mongoose.model("Note", CommentSchema);
+// variable for exporting thing
+var Comment = mongoose.model("Comment", CommentSchema);
 
+// export
 module.exports = Comment;
