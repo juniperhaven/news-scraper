@@ -11,7 +11,7 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 // port and app variables
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 var app = express();
 
 // something to do with the logger that I don't understand
